@@ -11,7 +11,7 @@ public class OneAway
         
     }
 
-    public boolean checkForOneEdit(String string1, String string2) {
+    public static boolean checkForOneEdit(String string1, String string2) {
         int matches = 0;
         for (int i = 0; i < string1.length(); i++) {
             String letter = string1.charAt(i);

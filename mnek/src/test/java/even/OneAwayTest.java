@@ -19,8 +19,8 @@ public class OneAwayTest
     {
         String inputString1 = "pale";
         String inputString2 = "ple";
-        OneAway.checkForOneEdit(inputString1, inputString2)
-        assertTrue( true );
+        Boolean actual = OneAway.checkForOneEdit(inputString1, inputString2);
+        assertEquals(true, actual);
     }
 
     @Test
@@ -28,8 +28,8 @@ public class OneAwayTest
     {
         String inputString1 = "pales";
         String inputString2 = "pale";
-        OneAway.checkForOneEdit(inputString1, inputString2)
-        assertTrue( true );
+        Boolean actual = OneAway.checkForOneEdit(inputString1, inputString2);
+        assertEquals(true, actual);
     }
 
     @Test 
@@ -37,7 +37,7 @@ public class OneAwayTest
     {
         String inputString1 = "pale";
         String inputString2 = "bale";
-        OneAway.checkForOneEdit(inputString1, inputString2)
-        assertTrue( true );
+        Boolean actual = OneAway.checkForOneEdit(inputString1, inputString2);
+        assertEquals(true, actual);
     }
 }

@@ -1,13 +1,12 @@
 package omg;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Test;
 
 /**
  * Unit test for simple App.
  */
-public class OneAwayTest 
+public class OneAwayTest
 {
     /**
      * Rigorous Test :-)
@@ -30,11 +29,29 @@ public class OneAwayTest
         assertEquals(true, actual);
     }
 
-    @Test 
+    @Test
     public void shouldAnswerWithTrueNeedsReplacement()
     {
         String inputString1 = "pale";
         String inputString2 = "bale";
+        Boolean actual = OneAway.checkForOneEdit(inputString1, inputString2);
+        assertEquals(true, actual);
+    }
+
+    @Test
+    public void shouldAnswerFalseWhenThereHasBeenMoreThanOneEdit()
+    {
+        String inputString1 = "pale";
+        String inputString2 = "bake";
+        Boolean actual = OneAway.checkForOneEdit(inputString1, inputString2);
+        assertEquals(false, actual);
+    }
+
+    @Test
+    public void shouldAnswerTrueWhenOneIsAddedToFirstString()
+    {
+        String inputString1 = "al";
+        String inputString2 = "pale";
         Boolean actual = OneAway.checkForOneEdit(inputString1, inputString2);
         assertEquals(true, actual);
     }

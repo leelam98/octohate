@@ -4,6 +4,13 @@
             "type": "java",
             "name": "CodeLens (Launch) - MorseCode",
             "request": "launch",
+            "mainClass": "dot.MorseCode",
+            "projectName": "MorseCode"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MorseCode",
+            "request": "launch",
             "mainClass": "src.main.java.dot.MorseCode",
             "projectName": "octohate"
         }

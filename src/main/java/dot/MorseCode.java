@@ -1,10 +1,19 @@
 package dot;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MorseCode{
     public static void main(String[] args){
-        toMorse(args);
+        String methodType = args[0];
+        String input = args[1];
+        if(methodType == "to_morse"){
+            toMorse(input);
+        }
+        if (methodType == "from_morse") {
+            //fromMorse(input)
+        }
     }
 
     final static String[][] code = {
@@ -36,18 +45,18 @@ public class MorseCode{
             from_map.put(pair[1], pair[0].charAt(0));
     }
 
-    static void toMorse(String input) {
-        System.out.printf("%s %n", input);
- 
+    static String toMorse(String input) {
+        String output = "";
         input = input.trim().replaceAll("[ ]+", " ").toUpperCase();
         for (char c : input.toCharArray()) {
             String s = to_map.get(c);
             if (s != null)
-                System.out.printf("%s ", s);
+                output.concat("%s ");
         }
-        System.out.println("\n");
+        output.concat("\n");
+        return output;
     }
-    static void fromMorse(String input) {
+    /*static void fromMorse(String input) {
         System.out.printf("%s %n", input);
  
         for (char c : input.toCharArray()) {
@@ -56,5 +65,5 @@ public class MorseCode{
                 System.out.printf("%s ", s);
         }
         System.out.println("\n");
-    }
+    }*/
 }

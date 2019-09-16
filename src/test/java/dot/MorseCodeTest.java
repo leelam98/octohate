@@ -33,33 +33,4 @@ public class MorseCodeTest{
         String actual = MorseCode.toMorse(input);
         assertEquals(expected, actual);
     }
-
-    /*@Test
-    public void ReplaceMorseCodeWithSingleLetter(){
-        String input = ".-..";
-        String expected = "L";
-        String actual = fromMorse(input);
-        assertEquals(expected, actual);
-    }
-    @Test 
-    public void ReplaceMorseCodeWithGroupOfLetters(){
-        String input = ".-.. -.-- ...";
-        String expected = "LYS";
-        String actual = fromMorse(input);
-        assertEquals(expected, actual);
-    }
-    @Test 
-    public void ReplaceMorseCodeWithSingleWord(){
-        String input = ".-.. .. .- --";
-        String expected = "LIAM";
-        String actual = fromMorse(input);
-        assertEquals(expected, actual);
-    }
-    @Test 
-    public void ReplaceMorseCodeWithTwoWords(){
-        String input = ".... . .-.. .-.. ---   .-- --- .-. .-.. -..";
-        String expected = "HELLO WORLD";
-        String actual = fromMorse(input);
-        assertEquals(expected, actual);
-    }*/
 }

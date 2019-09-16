@@ -1,6 +1,5 @@
 package dot;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -56,14 +55,4 @@ public class MorseCode{
         output.concat("\n");
         return output;
     }
-    /*static void fromMorse(String input) {
-        System.out.printf("%s %n", input);
- 
-        for (char c : input.toCharArray()) {
-            String s = from_map.get(c);
-            if (s != null)
-                System.out.printf("%s ", s);
-        }
-        System.out.println("\n");
-    }*/
 }

@@ -1,9 +1,2 @@
-<<<<<<< HEAD
-# Ignore Gradle project-specific cache directory
 .gradle
-
-# Ignore Gradle build output directory
-=======
-.gradle
->>>>>>> 72982e1ba669c581b5e558a24cf38ebf174a6593
 build

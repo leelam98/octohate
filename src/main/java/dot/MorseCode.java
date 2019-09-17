@@ -28,8 +28,8 @@ public class MorseCode{
         {"'", ".----."}, {":", "---..."}, {",", "--..--"}, {"-", "-....-"},
         {"(", "-.--.- "}, {".", ".-.-.- "}, {"?", "..--.. "}, {";", "-.-.-."},
         {"/", "-..-."}, {"-", "..--.-"}, {")", "---.."}, {"=", "-...-"},
-        {"@", ".--.-."}, {"\"", ".-..-."}, {"+", ".-.-."}, {" ", "   "}};
- 
+        {"@", ".--.-."}, {"\"", ".-..-."}, {"+", ".-.-."}};
+
     final static Map<Character, String> to_map = new HashMap<>();
 
     final static Map<String, Character> from_map = new HashMap<>();
@@ -46,13 +46,18 @@ public class MorseCode{
 
     static String toMorse(String input) {
         String output = "";
-        input = input.trim().replaceAll("[ ]+", " ").toUpperCase();
+        input = input.trim().toUpperCase();
         for (char c : input.toCharArray()) {
-            String s = to_map.get(c);
-            if (s != null)
-                output.concat("%s ");
+            if (c == ' ') {
+              output = output.substring(0, output.length() - 1);
+              output = output.concat("   ");
+            } else {
+              String s = to_map.get(c);
+              if (s != null) {
+                output = output.concat(s + " ");
+              }
+            }
         }
-        output.concat("\n");
-        return output;
+        return output.substring(0, output.length() - 1);
     }
 }
